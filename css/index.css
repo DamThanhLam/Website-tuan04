@@ -1,15 +1,34 @@
 *{
     margin: 0px;
 }
-.menu-left {
-    width: 70px;
+.body{
+    display: flex;
+    width: 100%;
     height: 100%;
+    justify-content: space-between;
+    z-index: 1;
+   
+}
+body{
+    background-color: white;
+    width: 1400px;
+    height: 710px;
+    overflow: auto;
+}
+html{
+    background-color:black;
+    display: flex;
+    justify-content: center;
+}
+.menu-left {
+    width: 5%;
+    height: auto;
     border-right: 1px solid rgb(150, 144, 144);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     background-color: white;
-    position: fixed;
+
 }
 .top-menu-left, .bottom-menu-left{
     display: flex;
@@ -33,13 +52,13 @@
 }
 
 .center{
-    margin-left:100px ;
-    margin-right: 350px;
-    width: 900px;
+    width: 50%;
+    background-color: aliceblue;
 }
 .title{
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
 }
 .record{
     width: 10px;
@@ -94,15 +113,20 @@ i.text-date{
 }
 
 .ps-metting{
-    width: 250px;
-    height: 150px;
+    width: 180px;
+    height: 100px;
+    position: relative;
+    margin-top: 20px;
+    z-index: 2;
 }
 img.img-metting{
     z-index: -1;
     position: absolute;
     object-fit: contain;
-    width: 250px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: fill;
 }
 .name-mic{
     display: flex;
@@ -118,27 +142,32 @@ img.img-metting{
     opacity: 0.5;
     border-radius: 10px;
     color: white;
+    z-index: -1;
 }
 .ps-main{
-    width: 600px;
-    height: 400px;
+    width: 100%;
+    height: 380px;
+    position: relative;
 }
 img.img-main{
-    width: 600px;
-    height: 330px;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
 }
 
 .meeting{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    width: 900px;
+    width: 100%;
     align-items: center;
+    overflow: hidden;
 }
 .list-ps{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 .online{
     width: 10px;
@@ -149,7 +178,7 @@ img.img-main{
     margin-right: 5px;
 }
 .control{
-    padding: 20px;
+    padding: 18px 0px 0px 0px;
     display: flex;
     justify-content: center;
 }
@@ -165,12 +194,75 @@ img.img-main{
     padding: 0px 9px;
 }
 
-.chat{
-    width: 300px;
-    height: 100%;
+.chat-right{
+    width: 33%;
+    height: auto;
     border-left: 1px solid rgb(150, 144, 144);
-    background-color: white;
-    position: fixed;
-    right: 0px;
-    top: 0px;
+}
+
+.participants{
+    padding-left: 20px;
+    margin-top: 17px;
+    height: 40%;
+}
+
+.participants div:nth-child(2){
+    margin-top: 50px;
+}
+
+.text p:nth-child(2){
+    background-color: rgb(254, 163, 163);
+    color: rgb(226, 43, 61);
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 10px;
+}
+.text h3:nth-child(1){
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.text{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title-participants div:nth-child(2){
+    padding: 6px 12px;
+    border: 1px solid rgb(226, 43, 61);
+    display: inline-block;
+    border-radius: 10px;
+    color:  rgb(226, 43, 61);
+    font-weight: 500;
+    margin: 0px 20px 0px 0px;
+}
+
+.title-participants{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-ps{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:10px 0px;
+}
+.item-ps div:nth-child(1){
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.item-ps div:nth-child(2){
+    margin: 0px 20px 0px 0px;
+}
+.item-ps-left p:nth-child(2){
+    margin-left: 10px;
+}
+
+.chat{
+    overflow: auto;
+    height: 55%;
+    width: 100%;
 }
